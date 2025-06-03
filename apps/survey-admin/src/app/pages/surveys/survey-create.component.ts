@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormlyModule, FormlyFieldConfig } from '@ngx-formly/core';
-import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
 import { AdminService, CreateSurveyTemplateInput } from '../../services/admin.service';
 
 @Component({
   selector: 'app-survey-create',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, TranslateModule, FormlyModule, FormlyBootstrapModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, TranslateModule, FormlyModule, FormlyPrimeNGModule],
   template: `
     <div class="max-w-4xl mx-auto">
       <!-- Page Header -->

@@ -19,14 +19,6 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/surveys/survey-create.component').then(m => m.SurveyCreateComponent),
   },
   {
-    path: 'surveys/:id',
-    loadComponent: () => import('./pages/surveys/survey-detail.component').then(m => m.SurveyDetailComponent),
-  },
-  {
-    path: 'surveys/:id/edit',
-    loadComponent: () => import('./pages/surveys/survey-edit.component').then(m => m.SurveyEditComponent),
-  },
-  {
     path: 'responses',
     loadComponent: () => import('./pages/responses/response-list.component').then(m => m.ResponseListComponent),
   },
@@ -35,12 +27,8 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/responses/response-detail.component').then(m => m.ResponseDetailComponent),
   },
   {
-    path: 'users',
-    loadComponent: () => import('./pages/users/user-list.component').then(m => m.UserListComponent),
-  },
-  {
-    path: 'settings',
-    loadComponent: () => import('./pages/settings/settings.component').then(m => m.SettingsComponent),
+    path: 'login',
+    loadComponent: () => import('./pages/auth/login.component').then(m => m.LoginComponent),
   },
   {
     path: '**',

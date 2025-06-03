@@ -11,7 +11,7 @@ import { ApolloModule, APOLLO_OPTIONS } from 'apollo-angular';
 import { HttpLink } from 'apollo-angular/http';
 import { InMemoryCache } from '@apollo/client/core';
 import { FormlyModule } from '@ngx-formly/core';
-import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
 import { routes } from './app/app.routes';
 
 // Factory para carregar traduções
@@ -52,7 +52,7 @@ bootstrapApplication(AppComponent, {
           { name: 'maxlength', message: 'Maximum length is {{requiredLength}} characters' },
         ],
       }),
-      FormlyBootstrapModule
+      FormlyPrimeNGModule
     ),
     {
       provide: APOLLO_OPTIONS,

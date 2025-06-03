@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { map, catchError, take } from 'rxjs/operators';
 import { AuthService } from '../services/auth.service';
 
 @Injectable({
@@ -24,19 +24,25 @@ export class AuthGuard implements CanActivate {
       return false;
     }
 
-    // If user is already loaded and authenticated
-    const currentUser = this.authService.currentUser$.value;
-    if (currentUser && this.authService.isAdmin()) {
-      return true;
-    }
-
-    // Try to load current user if not loaded yet
-    return this.authService.getCurrentUser().pipe(
-      map(user => {
-        if (user && this.authService.isAdmin()) {
+    // Check current user from observable
+    return this.authService.currentUser$.pipe(
+      take(1),
+      map(currentUser => {
+        if (currentUser && this.authService.isAdmin()) {
           return true;
         } else {
-          this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+          // Try to load current user if not loaded yet
+          this.authService.getCurrentUser().subscribe({
+            next: (user) => {
+              if (!user || !this.authService.isAdmin()) {
+                this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+              }
+            },
+            error: (error) => {
+              console.error('Auth guard error:', error);
+              this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+            }
+          });
           return false;
         }
       }),
@@ -63,15 +69,18 @@ export class AdminGuard implements CanActivate {
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
     
-    const currentUser = this.authService.currentUser$.value;
-    
-    if (currentUser && (currentUser.role === 'ADMIN' || currentUser.role === 'SUPER_ADMIN')) {
-      return true;
-    }
+    return this.authService.currentUser$.pipe(
+      take(1),
+      map(currentUser => {
+        if (currentUser && (currentUser.role === 'ADMIN' || currentUser.role === 'SUPER_ADMIN')) {
+          return true;
+        }
 
-    // Redirect to unauthorized page or login
-    this.router.navigate(['/unauthorized']);
-    return false;
+        // Redirect to unauthorized page or login
+        this.router.navigate(['/unauthorized']);
+        return false;
+      })
+    );
   }
 }
 
