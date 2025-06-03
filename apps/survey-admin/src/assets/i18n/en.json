@@ -1,0 +1,128 @@
+{
+  "admin": {
+    "title": "Voxer Studio Admin",
+    "nav": {
+      "dashboard": "Dashboard",
+      "surveys": "Surveys",
+      "responses": "Responses",
+      "users": "Users",
+      "settings": "Settings"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Overview of your survey platform",
+      "error": "Failed to load dashboard data",
+      "totalSurveys": "Total Surveys",
+      "totalResponses": "Total Responses",
+      "totalRespondents": "Total Respondents",
+      "activeSurveys": "Active Surveys",
+      "responsesChart": "Responses Over Time",
+      "recentResponses": "Recent Responses",
+      "response": "Response",
+      "view": "View",
+      "noRecentResponses": "No recent responses",
+      "quickActions": "Quick Actions",
+      "createSurvey": "Create New Survey",
+      "manageSurveys": "Manage Surveys",
+      "viewResponses": "View Responses"
+    },
+    "surveys": {
+      "title": "Surveys",
+      "subtitle": "Manage your survey templates",
+      "error": "Failed to load surveys",
+      "noSurveys": "No surveys found",
+      "noSurveysDescription": "Create your first survey to get started",
+      "createFirst": "Create Your First Survey",
+      "noDescription": "No description available",
+      "public": "Public",
+      "private": "Private",
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete",
+      "table": {
+        "title": "Title",
+        "type": "Type",
+        "status": "Status",
+        "visibility": "Visibility",
+        "created": "Created",
+        "actions": "Actions"
+      },
+      "create": {
+        "title": "Create Survey",
+        "subtitle": "Build a new survey template",
+        "basicInfo": "Basic Information",
+        "fields": "Survey Fields",
+        "addField": "Add Field",
+        "field": "Field",
+        "fieldLabel": "Field Label",
+        "fieldLabelPlaceholder": "Enter field label",
+        "fieldType": "Field Type",
+        "required": "Required field",
+        "choices": "Choices",
+        "choicePlaceholder": "Enter choice option",
+        "addChoice": "Add Choice",
+        "minRating": "Minimum Rating",
+        "maxRating": "Maximum Rating",
+        "noFields": "No fields added yet. Click 'Add Field' to start building your survey.",
+        "submit": "Create Survey",
+        "submitting": "Creating...",
+        "fieldTypes": {
+          "text": "Text Input",
+          "email": "Email Input",
+          "textarea": "Long Text",
+          "multipleChoice": "Multiple Choice",
+          "rating": "Rating Scale"
+        }
+      },
+      "detail": {
+        "title": "Survey Details",
+        "comingSoon": "Survey details view coming soon"
+      },
+      "edit": {
+        "title": "Edit Survey",
+        "comingSoon": "Survey editing coming soon"
+      }
+    },
+    "responses": {
+      "title": "Survey Responses",
+      "subtitle": "View and analyze survey responses",
+      "error": "Failed to load responses",
+      "noResponses": "No responses found",
+      "noResponsesDescription": "Responses will appear here once users start submitting surveys",
+      "view": "View Details",
+      "table": {
+        "id": "Response ID",
+        "survey": "Survey ID",
+        "status": "Status",
+        "submitted": "Submitted",
+        "actions": "Actions"
+      },
+      "detail": {
+        "title": "Response Details",
+        "comingSoon": "Response details view coming soon"
+      }
+    },
+    "users": {
+      "title": "User Management",
+      "comingSoon": "User management coming soon"
+    },
+    "settings": {
+      "title": "Settings",
+      "comingSoon": "Settings panel coming soon"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back",
+    "view": "View",
+    "create": "Create",
+    "update": "Update"
+  }
+}
+

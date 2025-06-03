@@ -1,0 +1,50 @@
+{
+  "common": {
+    "title": "Survey",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Operation completed successfully"
+  },
+  "survey": {
+    "title": "Survey Title",
+    "description": "Survey Description",
+    "question": "Question",
+    "answer": "Answer",
+    "required": "This field is required",
+    "optional": "Optional",
+    "multipleChoice": "Multiple Choice",
+    "singleChoice": "Single Choice",
+    "textInput": "Text Input",
+    "numberInput": "Number Input",
+    "dateInput": "Date Input",
+    "emailInput": "Email Input"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "surveys": "Surveys",
+    "responses": "Responses",
+    "users": "Users",
+    "settings": "Settings",
+    "createSurvey": "Create Survey",
+    "editSurvey": "Edit Survey",
+    "deleteSurvey": "Delete Survey",
+    "viewResponses": "View Responses",
+    "exportData": "Export Data"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "invalidCredentials": "Invalid credentials",
+    "loginSuccess": "Login successful",
+    "logoutSuccess": "Logout successful"
+  }
+}
+

@@ -1,0 +1,106 @@
+{
+  "app": {
+    "title": "Voxer Studio",
+    "footer": "© 2025 Voxer Studio. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back"
+  },
+  "home": {
+    "hero": {
+      "title": "Share Your Voice",
+      "subtitle": "Participate in market research surveys and help shape the future of products and services",
+      "cta": "Browse Surveys"
+    },
+    "features": {
+      "easy": {
+        "title": "Easy to Use",
+        "description": "Simple and intuitive interface designed for all users"
+      },
+      "anonymous": {
+        "title": "Anonymous & Secure",
+        "description": "Your privacy is protected with secure data handling"
+      },
+      "mobile": {
+        "title": "Mobile Friendly",
+        "description": "Take surveys on any device, anywhere, anytime"
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Join thousands of participants sharing their opinions",
+      "button": "Start Participating"
+    }
+  },
+  "surveys": {
+    "title": "Available Surveys",
+    "subtitle": "Choose from our collection of market research surveys",
+    "error": "Failed to load surveys",
+    "noSurveys": "No surveys available",
+    "noSurveysDescription": "Check back later for new surveys",
+    "noDescription": "No description available",
+    "minutes": "min",
+    "targetAudience": "Target Audience",
+    "viewDetails": "View Details",
+    "takeSurvey": "Take Survey"
+  },
+  "survey": {
+    "error": "Failed to load survey",
+    "minutes": "minutes",
+    "optional": "optional",
+    "required": "This field is required",
+    "respondentInfo": "Your Information",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "namePlaceholder": "Enter your name",
+    "emailPlaceholder": "Enter your email",
+    "phonePlaceholder": "Enter your phone number",
+    "submit": "Submit Survey",
+    "submitting": "Submitting...",
+    "takeSurvey": "Take Survey",
+    "backToList": "Back to Surveys",
+    "fieldTypes": {
+      "text": "Text input",
+      "email": "Email input",
+      "textarea": "Long text",
+      "multiple_choice": "Multiple choice",
+      "rating": "Rating scale"
+    },
+    "details": {
+      "info": "Survey Information",
+      "type": "Type",
+      "status": "Status",
+      "duration": "Estimated Duration",
+      "audience": "Target Audience",
+      "statistics": "Statistics",
+      "totalResponses": "Total Responses",
+      "completedResponses": "Completed",
+      "avgTime": "Average Time",
+      "preview": "Survey Preview",
+      "options": "Options",
+      "scale": "Scale"
+    }
+  },
+  "success": {
+    "title": "Thank You!",
+    "message": "Your survey response has been submitted successfully.",
+    "thankYou": "Thank You for Your Participation",
+    "description": "Your feedback is valuable and will help improve products and services. Your response has been recorded securely.",
+    "secure": "Secure",
+    "anonymous": "Anonymous",
+    "analyzed": "Analyzed",
+    "moreSurveys": "Take More Surveys",
+    "or": "or",
+    "backHome": "return to home",
+    "share": "Help us reach more participants:"
+  }
+}
+

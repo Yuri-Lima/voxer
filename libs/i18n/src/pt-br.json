@@ -1,0 +1,50 @@
+{
+  "common": {
+    "title": "Pesquisa",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "success": "Operação realizada com sucesso"
+  },
+  "survey": {
+    "title": "Título da Pesquisa",
+    "description": "Descrição da Pesquisa",
+    "question": "Pergunta",
+    "answer": "Resposta",
+    "required": "Este campo é obrigatório",
+    "optional": "Opcional",
+    "multipleChoice": "Múltipla Escolha",
+    "singleChoice": "Escolha Única",
+    "textInput": "Entrada de Texto",
+    "numberInput": "Entrada Numérica",
+    "dateInput": "Entrada de Data",
+    "emailInput": "Entrada de Email"
+  },
+  "admin": {
+    "dashboard": "Painel",
+    "surveys": "Pesquisas",
+    "responses": "Respostas",
+    "users": "Usuários",
+    "settings": "Configurações",
+    "createSurvey": "Criar Pesquisa",
+    "editSurvey": "Editar Pesquisa",
+    "deleteSurvey": "Excluir Pesquisa",
+    "viewResponses": "Ver Respostas",
+    "exportData": "Exportar Dados"
+  },
+  "auth": {
+    "login": "Entrar",
+    "logout": "Sair",
+    "email": "Email",
+    "password": "Senha",
+    "forgotPassword": "Esqueceu a senha?",
+    "invalidCredentials": "Credenciais inválidas",
+    "loginSuccess": "Login realizado com sucesso",
+    "logoutSuccess": "Logout realizado com sucesso"
+  }
+}
+

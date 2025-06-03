@@ -1,0 +1,106 @@
+{
+  "app": {
+    "title": "Voxer Studio",
+    "footer": "© 2025 Voxer Studio. Todos os direitos reservados."
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "back": "Voltar"
+  },
+  "home": {
+    "hero": {
+      "title": "Compartilhe Sua Opinião",
+      "subtitle": "Participe de pesquisas de mercado e ajude a moldar o futuro de produtos e serviços",
+      "cta": "Ver Pesquisas"
+    },
+    "features": {
+      "easy": {
+        "title": "Fácil de Usar",
+        "description": "Interface simples e intuitiva projetada para todos os usuários"
+      },
+      "anonymous": {
+        "title": "Anônimo e Seguro",
+        "description": "Sua privacidade é protegida com tratamento seguro de dados"
+      },
+      "mobile": {
+        "title": "Mobile Friendly",
+        "description": "Responda pesquisas em qualquer dispositivo, em qualquer lugar, a qualquer hora"
+      }
+    },
+    "cta": {
+      "title": "Pronto para Começar?",
+      "description": "Junte-se a milhares de participantes compartilhando suas opiniões",
+      "button": "Começar a Participar"
+    }
+  },
+  "surveys": {
+    "title": "Pesquisas Disponíveis",
+    "subtitle": "Escolha entre nossa coleção de pesquisas de mercado",
+    "error": "Falha ao carregar pesquisas",
+    "noSurveys": "Nenhuma pesquisa disponível",
+    "noSurveysDescription": "Volte mais tarde para novas pesquisas",
+    "noDescription": "Nenhuma descrição disponível",
+    "minutes": "min",
+    "targetAudience": "Público Alvo",
+    "viewDetails": "Ver Detalhes",
+    "takeSurvey": "Responder Pesquisa"
+  },
+  "survey": {
+    "error": "Falha ao carregar pesquisa",
+    "minutes": "minutos",
+    "optional": "opcional",
+    "required": "Este campo é obrigatório",
+    "respondentInfo": "Suas Informações",
+    "name": "Nome",
+    "email": "Email",
+    "phone": "Telefone",
+    "namePlaceholder": "Digite seu nome",
+    "emailPlaceholder": "Digite seu email",
+    "phonePlaceholder": "Digite seu telefone",
+    "submit": "Enviar Pesquisa",
+    "submitting": "Enviando...",
+    "takeSurvey": "Responder Pesquisa",
+    "backToList": "Voltar às Pesquisas",
+    "fieldTypes": {
+      "text": "Campo de texto",
+      "email": "Campo de email",
+      "textarea": "Texto longo",
+      "multiple_choice": "Múltipla escolha",
+      "rating": "Escala de avaliação"
+    },
+    "details": {
+      "info": "Informações da Pesquisa",
+      "type": "Tipo",
+      "status": "Status",
+      "duration": "Duração Estimada",
+      "audience": "Público Alvo",
+      "statistics": "Estatísticas",
+      "totalResponses": "Total de Respostas",
+      "completedResponses": "Concluídas",
+      "avgTime": "Tempo Médio",
+      "preview": "Prévia da Pesquisa",
+      "options": "Opções",
+      "scale": "Escala"
+    }
+  },
+  "success": {
+    "title": "Obrigado!",
+    "message": "Sua resposta foi enviada com sucesso.",
+    "thankYou": "Obrigado pela Sua Participação",
+    "description": "Seu feedback é valioso e ajudará a melhorar produtos e serviços. Sua resposta foi registrada com segurança.",
+    "secure": "Seguro",
+    "anonymous": "Anônimo",
+    "analyzed": "Analisado",
+    "moreSurveys": "Responder Mais Pesquisas",
+    "or": "ou",
+    "backHome": "voltar ao início",
+    "share": "Ajude-nos a alcançar mais participantes:"
+  }
+}
+

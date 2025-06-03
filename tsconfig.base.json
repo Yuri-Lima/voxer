@@ -1,0 +1,62 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": [
+      "ES2022",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@voxer/api": [
+        "apps/api/src/index.ts"
+      ],
+      "@voxer/api/*": [
+        "apps/api/src/*"
+      ],
+      "@voxer/market-survey": [
+        "apps/market-survey/src/index.ts"
+      ],
+      "@voxer/survey-app": [
+        "apps/survey-app/src/index.ts"
+      ],
+      "@voxer/survey-admin": [
+        "apps/survey-admin/src/index.ts"
+      ],
+      "@voxer/graphql": [
+        "libs/graphql/src/index.ts"
+      ],
+      "@voxer/i18n": [
+        "libs/i18n/src/index.ts"
+      ],
+      "@voxer/ui": [
+        "libs/ui/src/index.ts"
+      ],
+      "@voxer/integrations/email": [
+        "libs/integrations/email/src/index.ts"
+      ]
+    },
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}

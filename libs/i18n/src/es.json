@@ -1,0 +1,50 @@
+{
+  "common": {
+    "title": "Encuesta",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "success": "Operación completada exitosamente"
+  },
+  "survey": {
+    "title": "Título de la Encuesta",
+    "description": "Descripción de la Encuesta",
+    "question": "Pregunta",
+    "answer": "Respuesta",
+    "required": "Este campo es obligatorio",
+    "optional": "Opcional",
+    "multipleChoice": "Opción Múltiple",
+    "singleChoice": "Opción Única",
+    "textInput": "Entrada de Texto",
+    "numberInput": "Entrada Numérica",
+    "dateInput": "Entrada de Fecha",
+    "emailInput": "Entrada de Email"
+  },
+  "admin": {
+    "dashboard": "Panel",
+    "surveys": "Encuestas",
+    "responses": "Respuestas",
+    "users": "Usuarios",
+    "settings": "Configuraciones",
+    "createSurvey": "Crear Encuesta",
+    "editSurvey": "Editar Encuesta",
+    "deleteSurvey": "Eliminar Encuesta",
+    "viewResponses": "Ver Respuestas",
+    "exportData": "Exportar Datos"
+  },
+  "auth": {
+    "login": "Iniciar Sesión",
+    "logout": "Cerrar Sesión",
+    "email": "Email",
+    "password": "Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "invalidCredentials": "Credenciales inválidas",
+    "loginSuccess": "Inicio de sesión exitoso",
+    "logoutSuccess": "Cierre de sesión exitoso"
+  }
+}
+

@@ -1,0 +1,40 @@
+{
+  "name": "voxer",
+  "version": "1.0.0",
+  "description": "Sistema completo de pesquisas e questionários com arquitetura extensível",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "libs/*",
+    "plugins/*"
+  ],
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r dev",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "clean": "pnpm -r clean",
+    "api:dev": "pnpm --filter api start:dev",
+    "market-survey:dev": "pnpm --filter market-survey start:dev",
+    "survey-app:dev": "pnpm --filter survey-app start:dev",
+    "survey-admin:dev": "pnpm --filter survey-admin start:dev",
+    "install:all": "pnpm install"
+  },
+  "keywords": [
+    "surveys",
+    "questionnaires",
+    "nestjs",
+    "angular",
+    "graphql",
+    "monorepo"
+  ],
+  "author": "Voxer Studio Team",
+  "license": "MIT",
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "prettier": "^3.0.0",
+    "eslint": "^8.0.0"
+  }
+}
