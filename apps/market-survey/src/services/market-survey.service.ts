@@ -5,9 +5,7 @@ import { HttpService } from '@nestjs/axios';
 import { ConfigService } from '@nestjs/config';
 import { firstValueFrom } from 'rxjs';
 
-import { SurveyTemplate, SurveyType } from '../../../../apps/api/src/entities/survey-template.entity';
-import { SurveyResponse, ResponseStatus } from '../../../../apps/api/src/entities/survey-response.entity';
-import { Respondent } from '../../../../apps/api/src/entities/respondent.entity';
+import { SurveyTemplate, SurveyResponse, Respondent, SurveyType, ResponseStatus } from '@voxer/api';
 
 export interface SubmitSurveyData {
   templateId: string;

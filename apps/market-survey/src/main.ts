@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  
+
   // Configurar CORS para permitir acesso externo
   app.enableCors({
     origin: true, // Permitir qualquer origem para APIs públicas
@@ -20,9 +20,9 @@ async function bootstrap() {
     }),
   );
 
-  const port = process.env.PORT || 3002;
+  const port = process.env.MARKET_SURVEY_PORT || 3002;
   await app.listen(port);
-  
+
   console.log(`🚀 Market Survey Microservice running on: http://localhost:${port}`);
   console.log(`📊 GraphQL Playground: http://localhost:${port}/graphql`);
 }

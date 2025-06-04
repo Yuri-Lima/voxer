@@ -1,5 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
-import { EmailProvider, SendEmailOptions } from './interfaces/email-provider.interface';
+import type { EmailProvider } from './interfaces/email-provider.interface';
+import { SendEmailOptions } from './interfaces/email-provider.interface';
 
 export const EMAIL_PROVIDER = 'EMAIL_PROVIDER';
 
@@ -8,7 +9,7 @@ export class EmailService {
   constructor(
     @Inject(EMAIL_PROVIDER)
     private emailProvider: EmailProvider,
-  ) {}
+  ) { }
 
   async sendWelcomeEmail(to: string, name: string): Promise<void> {
     const options: SendEmailOptions = {
@@ -63,7 +64,7 @@ export class EmailService {
 
   async sendPasswordResetEmail(to: string, resetToken: string): Promise<void> {
     const resetUrl = `${process.env.FRONTEND_URL}/reset-password?token=${resetToken}`;
-    
+
     const options: SendEmailOptions = {
       to,
       subject: 'Reset de Senha - Voxer Studio',

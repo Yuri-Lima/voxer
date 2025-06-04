@@ -5,11 +5,11 @@ import { IsString, IsOptional, IsUUID, IsObject } from 'class-validator';
 export class SubmitSurveyResponseInput {
   @Field(() => ID)
   @IsUUID()
-  surveyTemplateId: string;
+  surveyTemplateId!: string;
 
   @Field(() => String)
   @IsObject()
-  answers: Record<string, any>;
+  answers!: Record<string, any>;
 
   @Field(() => ID, { nullable: true })
   @IsOptional()

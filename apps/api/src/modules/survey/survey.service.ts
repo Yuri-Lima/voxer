@@ -14,7 +14,7 @@ export class SurveyService {
     private surveyResponseRepository: Repository<SurveyResponse>,
     @InjectRepository(Respondent)
     private respondentRepository: Repository<Respondent>,
-  ) {}
+  ) { }
 
   async createSurveyTemplate(data: {
     title: string;
@@ -44,12 +44,16 @@ export class SurveyService {
 
   async updateSurveyTemplate(id: string, data: Partial<SurveyTemplate>): Promise<SurveyTemplate> {
     await this.surveyTemplateRepository.update(id, data);
-    return this.getSurveyTemplate(id);
+    const template = await this.getSurveyTemplate(id);
+    if (!template) {
+      throw new Error(`Survey template with id ${id} not found`);
+    }
+    return template;
   }
 
   async deleteSurveyTemplate(id: string): Promise<boolean> {
     const result = await this.surveyTemplateRepository.delete(id);
-    return result.affected > 0;
+    return (result.affected ?? 0) > 0;
   }
 
   async submitSurveyResponse(data: {
@@ -64,7 +68,7 @@ export class SurveyService {
       status: ResponseStatus.COMPLETED,
       completedAt: new Date(),
     });
-    
+
     return this.surveyResponseRepository.save(response);
   }
 

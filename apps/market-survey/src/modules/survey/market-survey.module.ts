@@ -3,9 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { HttpModule } from '@nestjs/axios';
 import { MarketSurveyService } from '../../services/market-survey.service';
 import { MarketSurveyResolver } from './market-survey.resolver';
-import { SurveyTemplate } from '../../../../../apps/api/src/entities/survey-template.entity';
-import { SurveyResponse } from '../../../../../apps/api/src/entities/survey-response.entity';
-import { Respondent } from '../../../../../apps/api/src/entities/respondent.entity';
+import { SurveyTemplate, SurveyResponse, Respondent } from '@voxer/api';
 
 @Module({
   imports: [
@@ -15,5 +13,5 @@ import { Respondent } from '../../../../../apps/api/src/entities/respondent.enti
   providers: [MarketSurveyService, MarketSurveyResolver],
   exports: [MarketSurveyService],
 })
-export class MarketSurveyModule {}
+export class MarketSurveyModule { }
 

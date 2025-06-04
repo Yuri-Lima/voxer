@@ -7,9 +7,14 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 """
 scalar DateTime
 
+type Mutation {
+  submitMarketSurvey(input: SubmitMarketSurveyInput!): SurveyResponse!
+}
+
 type Query {
-  hello: String!
-  status: String!
+  marketSurveyStats(templateId: ID!): SurveyStatsType!
+  publicMarketSurvey(id: ID!): SurveyTemplate
+  publicMarketSurveys: [SurveyTemplate!]!
 }
 
 type Respondent {
@@ -23,10 +28,23 @@ type Respondent {
   updatedAt: DateTime!
 }
 
+input RespondentInfoInput {
+  email: String
+  name: String
+  phone: String
+}
+
 enum ResponseStatus {
   ABANDONED
   COMPLETED
   IN_PROGRESS
+}
+
+input SubmitMarketSurveyInput {
+  answers: String!
+  metadata: String
+  respondentInfo: RespondentInfoInput
+  templateId: ID!
 }
 
 type SurveyResponse {
@@ -42,6 +60,13 @@ type SurveyResponse {
   surveyTemplate: SurveyTemplate!
   surveyTemplateId: String!
   updatedAt: DateTime!
+}
+
+type SurveyStatsType {
+  averageCompletionTime: Int!
+  completedResponses: Int!
+  responsesByDay: String!
+  totalResponses: Int!
 }
 
 enum SurveyStatus {

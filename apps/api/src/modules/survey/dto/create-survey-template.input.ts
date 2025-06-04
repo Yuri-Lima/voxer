@@ -7,7 +7,7 @@ export class CreateSurveyTemplateInput {
   @Field()
   @IsString()
   @MaxLength(255)
-  title: string;
+  title!: string;
 
   @Field({ nullable: true })
   @IsOptional()
@@ -16,11 +16,11 @@ export class CreateSurveyTemplateInput {
 
   @Field(() => SurveyType)
   @IsEnum(SurveyType)
-  type: SurveyType;
+  type!: SurveyType;
 
   @Field(() => String)
   @IsObject()
-  schema: Record<string, any>;
+  schema!: Record<string, any>;
 
   @Field(() => String, { nullable: true })
   @IsOptional()

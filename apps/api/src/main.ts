@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  
+
   // Configurar CORS para permitir acesso dos frontends
   app.enableCors({
     origin: [
@@ -24,9 +24,9 @@ async function bootstrap() {
     }),
   );
 
-  const port = process.env.PORT || 3001;
+  const port = process.env.API_PORT || 3001;
   await app.listen(port);
-  
+
   console.log(`🚀 Voxer Studio API running on: http://localhost:${port}`);
   console.log(`📊 GraphQL Playground: http://localhost:${port}/graphql`);
 }

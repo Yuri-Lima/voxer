@@ -1,6 +1,8 @@
-export * from './en.json';
-export * from './pt-br.json';
-export * from './es.json';
+import enTranslations from './en.json';
+import ptBrTranslations from './pt-br.json';
+import esTranslations from './es.json';
+
+export { enTranslations, ptBrTranslations, esTranslations };
 
 export const supportedLanguages = ['en', 'pt-br', 'es'] as const;
 export type SupportedLanguage = typeof supportedLanguages[number];

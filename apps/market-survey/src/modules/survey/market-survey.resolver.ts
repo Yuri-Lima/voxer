@@ -1,13 +1,12 @@
 import { Resolver, Query, Mutation, Args, ID } from '@nestjs/graphql';
 import { MarketSurveyService } from '../../services/market-survey.service';
-import { SurveyTemplate } from '../../../../../apps/api/src/entities/survey-template.entity';
-import { SurveyResponse } from '../../../../../apps/api/src/entities/survey-response.entity';
+import { SurveyTemplate, SurveyResponse } from '@voxer/api';
 import { SubmitMarketSurveyInput } from './dto/submit-market-survey.input';
 import { SurveyStatsType } from './dto/survey-stats.type';
 
 @Resolver(() => SurveyTemplate)
 export class MarketSurveyResolver {
-  constructor(private marketSurveyService: MarketSurveyService) {}
+  constructor(private marketSurveyService: MarketSurveyService) { }
 
   @Query(() => [SurveyTemplate])
   async publicMarketSurveys(): Promise<SurveyTemplate[]> {

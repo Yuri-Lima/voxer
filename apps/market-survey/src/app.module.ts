@@ -10,16 +10,32 @@ import { MarketSurveyModule } from './modules/survey/market-survey.module';
 import { TemplateModule } from './modules/template/template.module';
 
 // Entidades compartilhadas (referenciando a API principal)
-import { SurveyTemplate } from '../../../apps/api/src/entities/survey-template.entity';
-import { SurveyResponse } from '../../../apps/api/src/entities/survey-response.entity';
-import { Respondent } from '../../../apps/api/src/entities/respondent.entity';
+import { SurveyTemplate, SurveyResponse, Respondent, User } from '@voxer/api';
 
 @Module({
   imports: [
     // Configuração de ambiente
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: '.env',
+      envFilePath: '../../.env',
+    }),
+
+    // Configuração TypeORM (conecta ao mesmo banco de dados)
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      useFactory: (configService: ConfigService) => ({
+        type: 'postgres',
+        host: configService.get('DB_HOST', 'localhost'),
+        port: configService.get('DB_PORT', 5432),
+        username: configService.get('DB_USERNAME', 'postgres'),
+        password: configService.get('DB_PASSWORD', 'password'),
+        database: configService.get('DB_NAME', 'voxer_studio'),
+        entities: [Respondent, SurveyTemplate, SurveyResponse, User],
+        synchronize: configService.get('NODE_ENV') !== 'production',
+        logging: configService.get('NODE_ENV') === 'development',
+        ssl: configService.get('NODE_ENV') === 'production' ? { rejectUnauthorized: false } : false,
+      }),
+      inject: [ConfigService],
     }),
 
     // Configuração GraphQL
@@ -32,19 +48,6 @@ import { Respondent } from '../../../apps/api/src/entities/respondent.entity';
       context: ({ req, res }: { req: any; res: any }) => ({ req, res }),
     }),
 
-    // Configuração TypeORM (conecta ao mesmo ban    // Configuração TypeORM
-    TypeOrmModule.forRootAsync({
-      imports: [ConfigModule],
-      useFactory: (configService: ConfigService) => ({
-        type: 'sqlite',
-        database: './voxer_studio.db',
-        entities: [Respondent, SurveyTemplate, SurveyResponse],
-        synchronize: true, // Para desenvolvimento
-        logging: configService.get('NODE_ENV') === 'development',
-      }),
-      inject: [ConfigService],
-    }),
-
     // HTTP Module para comunicação com API principal
     HttpModule,
 
@@ -53,5 +56,5 @@ import { Respondent } from '../../../apps/api/src/entities/respondent.entity';
     TemplateModule,
   ],
 })
-export class AppModule {}
+export class AppModule { }
 

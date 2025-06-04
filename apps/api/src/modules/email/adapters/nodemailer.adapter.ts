@@ -7,7 +7,7 @@ import { EmailProvider, SendEmailOptions } from '../interfaces/email-provider.in
 @Injectable()
 export class NodemailerAdapter implements EmailProvider {
   private readonly logger = new Logger(NodemailerAdapter.name);
-  private transporter: Transporter;
+  private transporter!: Transporter;
 
   constructor(private configService: ConfigService) {
     this.initializeTransporter();
@@ -29,7 +29,7 @@ export class NodemailerAdapter implements EmailProvider {
     };
 
     this.transporter = nodemailer.createTransport(config);
-    
+
     // Verificar conexão
     this.transporter.verify((error, success) => {
       if (error) {
@@ -38,7 +38,7 @@ export class NodemailerAdapter implements EmailProvider {
         this.logger.log('Email server is ready to take our messages');
       }
     });
-  }  async sendEmail(options: SendEmailOptions): Promise<void> {
+  } async sendEmail(options: SendEmailOptions): Promise<void> {
     try {
       const mailOptions = {
         from: options.from || this.configService.get('SMTP_FROM', 'noreply@voxerstudio.com'),
