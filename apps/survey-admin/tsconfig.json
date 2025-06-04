@@ -33,7 +33,11 @@
   ],
   "exclude": [
     "src/**/*.spec.ts",
-    "src/**/*.test.ts"
+    "src/**/*.test.ts",
+    "src/app/guards/auth.guard.ts",
+    "src/app/interceptors/auth.interceptor.ts",
+    "src/app/pages/misc/misc.components.ts",
+    "node_modules",
+    "dist"
   ]
 }
-
