@@ -18,7 +18,11 @@
     "market-survey:dev": "pnpm --filter market-survey start:dev",
     "survey-app:dev": "pnpm --filter survey-app start:dev",
     "survey-admin:dev": "pnpm --filter survey-admin start:dev",
-    "install:all": "pnpm install"
+    "install:all": "pnpm install",
+    "codegen": "graphql-codegen --config codegen.yml && graphql-codegen --config codegen-market-survey.yml",
+    "codegen:api": "graphql-codegen --config codegen.yml",
+    "codegen:market-survey": "graphql-codegen --config codegen-market-survey.yml",
+    "codegen:watch": "graphql-codegen --config codegen.yml --watch && graphql-codegen --config codegen-market-survey.yml --watch"
   },
   "keywords": [
     "surveys",
@@ -31,6 +35,15 @@
   "author": "Voxer Studio Team",
   "license": "MIT",
   "packageManager": "pnpm@10.11.0",
+  "dependencies": {
+    "@graphql-codegen/cli": "^5.0.6",
+    "@graphql-codegen/fragment-matcher": "^5.1.0",
+    "@graphql-codegen/introspection": "^4.0.3",
+    "@graphql-codegen/typescript": "^4.1.6",
+    "@graphql-codegen/typescript-apollo-angular": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.6.1",
+    "apollo-angular": "^6.0.0"
+  },
   "devDependencies": {
     "@types/node": "^20.0.0",
     "typescript": "^5.0.0",

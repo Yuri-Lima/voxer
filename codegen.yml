@@ -1,0 +1,40 @@
+schema: 
+  - 'apps/api/src/schema.gql'
+documents: 
+  - 'apps/survey-app/src/app/graphql/queries.ts'
+  - 'apps/survey-admin/src/app/graphql/admin-queries.ts'
+generates:
+  libs/graphql/src/generated/api/types.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+    config:
+      scalars:
+        DateTime: string
+      enumsAsTypes: true
+      constEnums: true
+      futureProofEnums: true
+      
+  libs/graphql/src/generated/api/services.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-apollo-angular
+    config:
+      scalars:
+        DateTime: string
+      enumsAsTypes: true
+      constEnums: true
+      futureProofEnums: true
+      serviceName: 'ApiService'
+      serviceProvidedIn: 'root'
+      namedClient: 'api'
+      
+  libs/graphql/src/generated/api/introspection.json:
+    plugins:
+      - introspection
+      
+  libs/graphql/src/generated/api/fragment-matcher.ts:
+    plugins:
+      - fragment-matcher
+

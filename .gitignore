@@ -1,2 +1,7 @@
 /node_modules
 /demo-app
+# GraphQL Codegen Generated Files
+libs/graphql/src/generated/
+
+# Ignore generated schema files
+apps/*/src/schema.gql

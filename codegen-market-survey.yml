@@ -1,0 +1,39 @@
+schema: 
+  - 'apps/market-survey/apps/market-survey/src/schema.gql'
+documents: 
+  - 'apps/survey-app/src/app/graphql/market-survey-queries.ts'
+generates:
+  libs/graphql/src/generated/market-survey/types.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+    config:
+      scalars:
+        DateTime: string
+      enumsAsTypes: true
+      constEnums: true
+      futureProofEnums: true
+      
+  libs/graphql/src/generated/market-survey/services.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-apollo-angular
+    config:
+      scalars:
+        DateTime: string
+      enumsAsTypes: true
+      constEnums: true
+      futureProofEnums: true
+      serviceName: 'MarketSurveyService'
+      serviceProvidedIn: 'root'
+      namedClient: 'marketSurvey'
+      
+  libs/graphql/src/generated/market-survey/introspection.json:
+    plugins:
+      - introspection
+      
+  libs/graphql/src/generated/market-survey/fragment-matcher.ts:
+    plugins:
+      - fragment-matcher
+
